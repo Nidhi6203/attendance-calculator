@@ -1,0 +1,32 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main() {
+    int totalClasses, attendedClasses;
+    float attendance;
+
+    // Get user input for total classes and attended classes
+    cout << "Enter the total number of classes held: ";
+    cin >> totalClasses;
+
+    cout << "Enter the number of classes attended: ";
+    cin >> attendedClasses;
+
+    // Calculate attendance percentage
+    attendance = (float)attendedClasses / (float)totalClasses * 100.0;
+
+    // Display attendance percentage
+    cout << fixed << setprecision(2);
+    cout << "Your attendance percentage is: " << attendance << "%" << endl;
+
+    // Check if attendance percentage meets minimum requirement
+    if (attendance >= 75.0) {
+        cout << "Congratulations! You meet the minimum attendance requirement." << endl;
+    } else {
+        cout << "Sorry, you do not meet the minimum attendance requirement." << endl;
+    }
+
+    return 0;
+}
